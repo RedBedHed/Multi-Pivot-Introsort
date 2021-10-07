@@ -1,0 +1,11 @@
+*.txt
+#makeHeader.sh#
+Makefile
+Doxyfile
+Makefile~
+Doxyfile~
+*.js
+*.c
+*.html
+*.css
+*.tex
