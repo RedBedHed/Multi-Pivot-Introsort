@@ -1,0 +1,6 @@
+echo "/*"
+echo Author: $1
+echo Date: $d`date+%m-%d-%y'
+echo Description: $2
+echo "*/"
+echo $d #MM-DD-YYY

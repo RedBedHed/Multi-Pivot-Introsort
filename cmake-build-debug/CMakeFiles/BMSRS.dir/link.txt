@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2021.2.1\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\BMSRS.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\BMSRS.dir/objects.a @CMakeFiles\BMSRS.dir\objects1.rsp
+C:\MinGW\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\BMSRS.dir/objects.a -Wl,--no-whole-archive -o BMSRS.exe -Wl,--out-implib,libBMSRS.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\BMSRS.dir\linklibs.rsp

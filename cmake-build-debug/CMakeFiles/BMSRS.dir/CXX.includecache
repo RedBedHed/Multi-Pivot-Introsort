@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/evcmo/CLionProjects/BMSRS/main.cpp
+iostream
+-
+random
+-
+time.h
+-
+sort.h
+C:/Users/evcmo/CLionProjects/BMSRS/sort.h
+random
+-
+climits
+-
+
+C:/Users/evcmo/CLionProjects/BMSRS/sort.cpp
+sort.h
+C:/Users/evcmo/CLionProjects/BMSRS/sort.h
+
+C:/Users/evcmo/CLionProjects/BMSRS/sort.h
+iostream
+-
+cassert
+-
+

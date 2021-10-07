@@ -1,0 +1,5 @@
+echo "/*"
+echo "Author: $1"
+echo "Date: $(date +%m-%d-%y)"
+echo "Description: $2"
+echo "*/"
