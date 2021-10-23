@@ -296,7 +296,7 @@ void rSort(const uint64_t m,
     // Initialize mutable
     // pointers.
     E *l = low,
-            *r = high;
+      *r = high;
 
     if ((r - l) > 16) {
 
@@ -315,12 +315,11 @@ void rSort(const uint64_t m,
         // element.
         do {
             if (*l & m) {
-                while(
-                        *r & m &&
-                        r - l > 1)
+                while(*r & m
+                && r - l > 1)
                     --r;
                 const E
-                        t = *l;
+                 t = *l;
                 *l = *r;
                 *r-- = t;
             } else l++;
