@@ -1,5 +1,5 @@
 CC = g++
-CFLAGS = -O3 -flto -pipe -DNDEBUG -Wall -march=native  
+CFLAGS = -Wall -O3 -flto -pipe -DNDEBUG -Wall -march=native  
 O = main.o sort.o
 
 erg: $(O)

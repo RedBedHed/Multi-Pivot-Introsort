@@ -1,0 +1,6 @@
+i=0
+while [[ i -lt 200 ]]
+do
+    ./erg
+    ((i++))
+done

@@ -2,6 +2,9 @@
 // Created by evcmo on 9/5/2021.
 //
 
+#include <random>
+#include <climits>
+#include <ctime>
 #include "sort.h"
 
 namespace Arrays {
@@ -867,7 +870,7 @@ namespace Arrays {
                 // "less" and "great"
                 // respectively.
                 E *l = low + 1,
-                  *g = high - 1;
+                  *g = high;
 
                 // Skip over elements that
                 // are already in order.

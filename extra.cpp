@@ -393,4 +393,69 @@ void rSort(const uint64_t m,
         }
     }
 
+    template
+            <typename E>
+    void tradSort(E *const low,
+                  E *const high) {
+
+        if(low >= high) return;
+
+        const int x = high - low;
+        const int y = (rand() % x);
+        // Find an approximate
+        // midpoint of the interval.
+        E *const mid = low + y;
+
+        // Assign midpoint to pivot
+        // variable.
+        const E p = *mid;
+
+        // Bring left end inside.
+        // Left end will be
+        // replaced and pivot will
+        // be swapped back later.
+        *mid = *low;
+
+        // Initialize l and g.
+        // "less" and "great"
+        // respectively.
+        E *l = low + 1,
+                *g = high;
+
+        for (E *k = l;
+             k <= g; ++k)
+            if (*k < p)
+                swap(k, l++);
+            else if (*k > p) {
+                while (*g > p &&
+                       k < g)
+                    --g;
+                swap(k, g--);
+                if (*k < p)
+                    swap(k, l++);
+            }
+
+        // Replace left end.
+        *low = *--l;
+
+        // Swap pivot into place.
+        *l = p;
+
+        if(l > low)
+            --l;
+        if(g < high)
+            ++g;
+
+        // Copy l, recycle g. "less"
+        // and "great" respectively.
+
+        // Sort left and right portions.
+        tradSort<E>(
+                low, l
+        );
+        tradSort<E>(
+                g, high
+        );
+    }
+
 }
