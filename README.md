@@ -1,2 +1,2 @@
-# BMSRS
+# Multi Pivot Introsort
  
