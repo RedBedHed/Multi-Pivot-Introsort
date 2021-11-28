@@ -134,8 +134,8 @@ namespace Arrays {
          * the costly lower boundary check in the nested loops.
          * </p>
          *
-         * @authors Josh Blosh
-         * @authors John Bently
+         * @authors Josh Bloch
+         * @authors Jon Bently
          * @authors Ellie Moore
          * @tparam E the element type
          * @param low a pointer to the leftmost index
