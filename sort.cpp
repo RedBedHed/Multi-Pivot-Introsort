@@ -461,8 +461,8 @@ namespace Arrays {
          * a leftmost partition.
          * @param low a pointer to the leftmost index
          * @param high a pointer to the rightmost index
-         * @param Leftmost whether or not this subarray is a
-         * left-most partition.
+         * @param height the distance of the current sort
+         * tree from the initial height of 2log<sub>2</sub>n
          */
         template
         <typename E, bool Leftmost = true>
@@ -480,6 +480,9 @@ namespace Arrays {
                     low, high
                 );
 
+            // Heap sort when the sort
+            // tree becomes excessively
+            // tall.
             if(height < 0)
                 return hSort(low, high);
 
