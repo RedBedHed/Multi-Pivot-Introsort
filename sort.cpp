@@ -397,11 +397,12 @@ namespace Arrays {
          *   <li>
          *    <p>
          *     <u>
-         * Ignore In-Order and Equal Elements
+         * Ignore Elements when possible
          *     </u>
          *    </p>
          *    <p>
-         * Runs of elements will be ignored.
+         * Equal elements and elements that respect the partition
+         * will be ignored.
          *    </p>
          *   </li>
          *   <li>
