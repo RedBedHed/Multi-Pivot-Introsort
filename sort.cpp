@@ -51,10 +51,12 @@ namespace Arrays {
          * @tparam E The type
          * @param x The integer
          */
+
         template<typename E>
         void parallelPrefixFill(E &x);
 
-        template<> void parallelPrefixFill
+        template<> [[maybe_unused]]
+        void parallelPrefixFill
                 <uint64_t>(uint64_t& x) {
             x |= x >> 1U;
             x |= x >> 2U;
@@ -64,7 +66,8 @@ namespace Arrays {
             x |= x >> 32U;
         }
 
-        template<> void parallelPrefixFill
+        template<> [[maybe_unused]]
+        void parallelPrefixFill
                 <uint32_t>(uint32_t & x) {
             x |= x >> 1U;
             x |= x >> 2U;
@@ -73,7 +76,8 @@ namespace Arrays {
             x |= x >> 16U;
         }
 
-        template<> void parallelPrefixFill
+        template<> [[maybe_unused]]
+        void parallelPrefixFill
                 <uint16_t>(uint16_t & x) {
             x |= x >> 1U;
             x |= x >> 2U;
@@ -81,7 +85,8 @@ namespace Arrays {
             x |= x >> 8U;
         }
 
-        template<> void parallelPrefixFill
+        template<> [[maybe_unused]]
+        void parallelPrefixFill
                 <uint8_t>(uint8_t & x) {
             x |= x >> 1U;
             x |= x >> 2U;

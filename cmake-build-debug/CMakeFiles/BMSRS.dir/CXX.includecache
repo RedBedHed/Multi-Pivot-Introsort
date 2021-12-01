@@ -6,12 +6,6 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/evcmo/CLionProjects/BMSRS/extra.cpp
-iostream
--
-cassert
--
-
 C:/Users/evcmo/CLionProjects/BMSRS/sort.cpp
 random
 -
