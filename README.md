@@ -50,7 +50,7 @@ A highly-optimized (un-tuned) Introsort assembled from several different researc
             <li>
              <p>
               <u>
-          Use Smart Pivot Selection
+          <h3>Use Smart Pivot Selection</h3>
               </u>
              </p>
              <p>
