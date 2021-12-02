@@ -139,4 +139,6 @@ A highly-optimized (un-tuned) Introsort assembled from several different researc
             </li>
            </ol>
           </p>
-![Test](/figures/test.png)
+<p align = "center">
+ <img src="/figures/test.png" />
+</p>
