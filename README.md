@@ -42,7 +42,7 @@ A highly-optimized (un-tuned) Introsort assembled from several different researc
          
 <p>
            <h1><b>
-          <i>Optimizations:</i>
+          <i>Optimizations</i>
            </b></h1>
           </p>
           <p>
