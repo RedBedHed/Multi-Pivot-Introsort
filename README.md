@@ -104,7 +104,8 @@ A highly-optimized (un-tuned) Introsort assembled from several different researc
           After partitioning with more than one pivot, if the middle
           portion comprises more than 2/3 of the current interval,
           we swap all elements equal to the pivots out of the way
-          before recursively sorting.
+          before recursively sorting. This helps to avoid the case
+          in which we need to use heap sort.     
              </p>
             </li>
             <li>
