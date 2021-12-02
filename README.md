@@ -3,10 +3,10 @@
 A highly-optimized (un-tuned) Introsort assembled from several different research papers and open-source libraries, ported into the C++ language.
 
 <b>
-         <i>Introspective Multi-Pivot Quick Sort</i>
+           <i>Introspective Multi-Pivot Quick Sort</i>
           </b>
          
-          <p>
+<p>
           This sort uses a recursive pattern to re-arrange data
           in ascending order. Whenever the size of the current
           interval falls below the threshold of 32 elements,
@@ -14,7 +14,7 @@ A highly-optimized (un-tuned) Introsort assembled from several different researc
           current interval will be in sorted order.
           </p>
          
-          <p>
+<p>
            <a href =
            "https://codeblab.com/wp-content/uploads/2009/09/DualPivotQuicksort.pdf"
            >
@@ -24,7 +24,7 @@ A highly-optimized (un-tuned) Introsort assembled from several different researc
           Yaroslavskiy.
           </p>
          
-          <p>
+<p>
            <a href =
            "https://www.researchgate.net/publication/289974363_Multi-Pivot_Quicksort_Theory_and_Experiments"
            >
@@ -34,17 +34,17 @@ A highly-optimized (un-tuned) Introsort assembled from several different researc
           Lopez-Ortix, Munro, and Qiao.
           </p>
          
-          <p>
+<p>
           An optimized Dual-Pivot Quicksort by Bloch and
           Bently can be found in the open-source jdk within
           the java.util library.
           </p>
          
-          <p>
+<p>
           This sort is derived from the resources listed above.
           </p>
          
-          <p>
+<p>
            <b>
           <i>Optimizations:</i>
            </b>
