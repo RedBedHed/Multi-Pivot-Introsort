@@ -140,7 +140,7 @@ A highly-optimized (un-tuned) Introsort assembled from several different researc
            </ol>
           </p>
           
-# Speed Data
+# *Speed Data*
 <p align = "center">
  <img src="/figures/test.png" />
 </p>
