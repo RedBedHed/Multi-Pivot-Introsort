@@ -2,9 +2,9 @@
  
 A highly-optimized (un-tuned) Introsort assembled from several different research papers and open-source libraries, ported into the C++ language.
 
-<b>
+<h1><b>
            <i>Introspective Multi-Pivot Quick Sort</i>
-          </b>
+          </b></h1>
          
 <p>
           This sort uses a recursive pattern to re-arrange data
