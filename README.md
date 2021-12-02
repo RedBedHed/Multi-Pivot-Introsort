@@ -1,10 +1,6 @@
-# Multi Pivot Introsort
+# *Multi Pivot Introsort*
  
 A highly-optimized (un-tuned) Introsort assembled from several different research papers and open-source libraries, ported into the C++ language.
-
-<h1><b>
-           <i>Introspective Multi-Pivot Quick Sort</i>
-          </b></h1>
          
 <p>
           This sort uses a recursive pattern to re-arrange data
@@ -45,9 +41,9 @@ A highly-optimized (un-tuned) Introsort assembled from several different researc
           </p>
          
 <p>
-           <b>
+           <h1><b>
           <i>Optimizations:</i>
-           </b>
+           </b></h1>
           </p>
           <p>
            <ol>
