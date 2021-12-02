@@ -117,7 +117,7 @@ A highly-optimized (un-tuned) Introsort assembled from several different researc
              <p>
           Insertion Sort is small and relies heavily on swapping.
           Fewer instructions help to alleviate the overhead that
-          plagues sorting algorithms, and consistent swapping
+          plagues large sorting algorithms, and consistent swapping
           leverages CPU caching to its fullest extent. These
           features allow insertion sort to beat the runtimes of
           O(nlogn) sorts on small sets of data.
@@ -131,7 +131,7 @@ A highly-optimized (un-tuned) Introsort assembled from several different researc
               </u>
              </p>
              <p>
-          This sort is an introspective sort&mdash a sort that
+          This sort is an introspective sort-- a sort that
           switches to a guaranteed O(nlogn) algorithm whenever
           time complexity is becoming quadratic. Here, Heap Sort
           is used to avoid the overhead of auxilliary storage.
