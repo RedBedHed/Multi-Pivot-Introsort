@@ -2,9 +2,6 @@
 // Created by evcmo on 9/5/2021.
 //
 
-#include <random>
-#include <climits>
-#include <ctime>
 #include "sort.h"
 
 namespace Arrays {
