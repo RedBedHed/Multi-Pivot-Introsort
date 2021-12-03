@@ -591,15 +591,13 @@ namespace Arrays {
                 // Initialize l and g.
                 // "less" and "great"
                 // respectively.
-                E* l = low + 2,
-                 * g = high - 1;
+                E* l = low + 1,
+                 * g = high;
 
                 // Skip elements that
                 // are already in order.
-                while (l < high && *l < p1)
-                    ++l;
-                while (g > low && *g > p3)
-                    --g;
+                while (++l < high && *l < p1);
+                while (--g > low  && *g > p3);
 
                 // Copy ll and gg.
                 // "less-less" and
@@ -658,10 +656,8 @@ namespace Arrays {
 
                 // Skip elements equal to p1
                 // and p3.
-                while (o > low && *o == p1)
-                    --o;
-                while (e < high && *e == p3)
-                    ++e;
+                while (--o > low && *o == p1);
+                while (++e < high && *e == p3);
 
                 // Sort the leftmost and
                 // rightmost portion(s).
@@ -772,15 +768,13 @@ namespace Arrays {
                 // Initialize l and g.
                 // "less" and "great"
                 // respectively.
-                E *l = low + 1,
-                  *g = high - 1;
+                E *l = low,
+                  *g = high;
 
                 // Skip elements that
                 // are already in order.
-                while (l < high && *l < lp)
-                    ++l;
-                while (g > low && *g > rp)
-                    --g;
+                while (++l < high && *l < lp);
+                while (--g > low && *g > rp);
 
                 // Partition with
                 // the Dutch flag

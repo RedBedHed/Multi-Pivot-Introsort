@@ -16,9 +16,8 @@ bool test(int* const a, const int len) {
 int main() {
     std::default_random_engine generator(clock());
     std::uniform_int_distribution<long> distribution(LONG_MIN, LONG_MAX);
-    uint64_t y = 0;
     double c = 0;
-    for (; y < 20; ++y) {
+    for (uint64_t y = 0; y < 20; ++y) {
         uint64_t x = 2000000;
         int *a = new int[x];
         for (int *i = a; i < a + x; ++i) {
