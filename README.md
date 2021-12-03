@@ -198,5 +198,5 @@ A highly-optimized (un-tuned) Introsort assembled from several different researc
 
 # *Explore Assembly*
 <a href="https://godbolt.org/z/6qvf5hqev">
-![Explore](/figures/exp.png)
+ <img src="/figures/exp.png" />
 </a>
