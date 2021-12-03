@@ -144,3 +144,54 @@ A highly-optimized (un-tuned) Introsort assembled from several different researc
 <p align = "center">
  <img src="/figures/test.png" />
 </p>
+
+# Authors
+<p>
+ <ol>
+  <li>
+   <i>
+    Tony Hoare
+   </i>
+  </li>
+  <li>
+   <i>
+    David Musser
+   </i>
+  </li>
+  <li>
+   <i>
+    Jon Bently
+   </i>
+  </li>
+  <li>
+   <i>
+    Josh Bloch
+   </i>
+  </li>
+  <li>
+   <i>
+    Shrinu Kushagra
+   </i>
+  </li>
+  <li>
+   <i>
+    Alejandro Lopez-Ortiz
+   </i>
+  </li>
+  <li>
+   <i>
+    J. Ian Munro
+   </i>
+  </li>
+  <li>
+   <i>
+    Aurick Qiao
+   </i>
+  </li>
+  <li>
+   <i>
+    Ellie Moore
+   </i>
+  </li>
+ </ol>
+</p>
