@@ -90,8 +90,8 @@ A highly-optimized (un-tuned) Introsort assembled from several different researc
               </u>
              </p>
              <p>
-          Equal elements and elements that respect the partition
-          will be ignored.
+          Elements equal to the pivot and elements that respect the 
+          partition will be ignored.
              </p>
             </li>
             <li>
