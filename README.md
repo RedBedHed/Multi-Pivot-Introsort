@@ -196,7 +196,7 @@ A highly-optimized (un-tuned) Introsort assembled from several different researc
  </ul>
 </p>
 
-# *Explore Assembly*
+# *A Compiler's View*
 <a href="https://godbolt.org/z/6qvf5hqev">
  <img src="/figures/exp.png" />
 </a>
