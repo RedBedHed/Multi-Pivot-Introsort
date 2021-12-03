@@ -147,15 +147,30 @@ A highly-optimized (un-tuned) Introsort assembled from several different researc
 
 # Authors
 <p>
- <ol>
+ <ul>
   <li>
    <i>
-    Tony Hoare
+    Alejandro Lopez-Ortiz
+   </i>
+  </li>
+  <li>
+   <i>
+    Aurick Qiao
    </i>
   </li>
   <li>
    <i>
     David Musser
+   </i>
+  </li>
+  <li>
+   <i>
+    Ellie Moore
+   </i>
+  </li>
+  <li>
+   <i>
+    J. Ian Munro
    </i>
   </li>
   <li>
@@ -175,23 +190,8 @@ A highly-optimized (un-tuned) Introsort assembled from several different researc
   </li>
   <li>
    <i>
-    Alejandro Lopez-Ortiz
+    Tony Hoare
    </i>
-  </li>
-  <li>
-   <i>
-    J. Ian Munro
-   </i>
-  </li>
-  <li>
-   <i>
-    Aurick Qiao
-   </i>
-  </li>
-  <li>
-   <i>
-    Ellie Moore
-   </i>
-  </li>
- </ol>
+  </li> 
+ </ul>
 </p>
