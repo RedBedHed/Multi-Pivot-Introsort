@@ -90,7 +90,7 @@ A highly-optimized (un-tuned) Introsort assembled from several different researc
               </u>
              </p>
              <p>
-          Elements equal to the pivot and elements that respect the 
+          Elements equal to the pivot(s) and elements that respect the 
           partition will be ignored.
              </p>
             </li>
