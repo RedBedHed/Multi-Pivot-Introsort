@@ -145,7 +145,7 @@ A highly-optimized (un-tuned) Introsort assembled from several different researc
  <img src="/figures/test.png" />
 </p>
 
-# Authors
+# *Credits*
 <p>
  <ul>
   <li>
