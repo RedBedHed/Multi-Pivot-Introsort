@@ -4,8 +4,10 @@
 #include "sort.h"
 #include <random>
 #include <climits>
+#include <algorithm>
 
 bool test(int* const a, const int len) {
+    //std::cout << *a << ' ';
     for(int* i = a + 1; i < a + len; ++i) {
         if (*(i - 1) > *i) return false;
         //std::cout << *i << ' ';
@@ -22,6 +24,7 @@ int main() {
         int *a = new int[x];
         for (int *i = a; i < a + x; ++i) {
             *i = distribution(generator) % x;
+            //std::cout << *i << ' ';
         }
         const int s = clock();
         Arrays::uSort<int32_t>(a, x);

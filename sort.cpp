@@ -9,27 +9,27 @@ namespace Arrays {
     namespace {
 
         constexpr uint32_t
-        DPQSInsertionThreshold = 32;
+                DPQSInsertionThreshold = 32;
 
         /**
          * The DeBruijn constant.
          */
         constexpr uint64_t DeBruijn64 =
-            0x03F79D71B4CB0A89L;
+                0x03F79D71B4CB0A89L;
 
         /*
          * The DeBruijn map from key to integer
          * square index.
          */
         constexpr uint8_t DeBruijnTableF[] = {
-            0,  47,  1, 56, 48, 27,  2, 60,
-            57, 49, 41, 37, 28, 16,  3, 61,
-            54, 58, 35, 52, 50, 42, 21, 44,
-            38, 32, 29, 23, 17, 11,  4, 62,
-            46, 55, 26, 59, 40, 36, 15, 53,
-            34, 51, 20, 43, 31, 22, 10, 45,
-            25, 39, 14, 33, 19, 30,  9, 24,
-            13, 18,  8, 12,  7,  6,  5, 63
+                0,  47,  1, 56, 48, 27,  2, 60,
+                57, 49, 41, 37, 28, 16,  3, 61,
+                54, 58, 35, 52, 50, 42, 21, 44,
+                38, 32, 29, 23, 17, 11,  4, 62,
+                46, 55, 26, 59, 40, 36, 15, 53,
+                34, 51, 20, 43, 31, 22, 10, 45,
+                25, 39, 14, 33, 19, 30,  9, 24,
+                13, 18,  8, 12,  7,  6,  5, 63
         };
 
         /**
@@ -103,7 +103,7 @@ namespace Arrays {
             assert(l != 0);
             parallelPrefixFill(l);
             return DeBruijnTableF[(int)
-                ((l * DeBruijn64) >> 58U)
+                    ((l * DeBruijn64) >> 58U)
             ];
         }
 
@@ -112,7 +112,7 @@ namespace Arrays {
         swap(E *const i,
              E *const j) {
             E const
-            el = *i;
+                    el = *i;
             *i = *j;
             *j = el;
         }
@@ -180,7 +180,7 @@ namespace Arrays {
                 // at left as a sentinel.
                 for (E *i = l;
                      ++l <= r;
-                        i = ++l) {
+                     i = ++l) {
                     E ex = *i, ey = *l;
                     if (ex < ey) {
                         ey = ex;
@@ -301,7 +301,7 @@ namespace Arrays {
             E* const l = low;
             int x = r - l;
             for(int i =
-               (x >> 1U); i >= 0; --i)
+                (x >> 1U); i >= 0; --i)
                 siftDown(l, i, x);
             while(l < --r) {
                 const E z = *l; *l = *r;
@@ -480,7 +480,7 @@ namespace Arrays {
             // small intervals.
             if (x < DPQSInsertionThreshold)
                 return iSort<E, Leftmost>(
-                    low, high
+                        low, high
                 );
 
             // Heap sort when the sort
@@ -499,7 +499,7 @@ namespace Arrays {
             // Find an approximate
             // midpoint of the interval.
             E *const mid =
-            low + ((high - low) >> 1U);
+                low + ((high - low) >> 1U);
 
             // Assign tercile indices
             // to candidate pivots.
@@ -607,13 +607,13 @@ namespace Arrays {
                 // scheme.
                 while(l <= g) {
                     while(*l < p2 &&
-                           l <= g) {
+                          l <= g) {
                         if(*l < p1)
                             swap(ll++, l);
                         ++l;
                     }
                     while(*g > p2 &&
-                           l <= g) {
+                          l <= g) {
                         if(*g > p3)
                             swap(gg--, g);
                         --g;
@@ -739,8 +739,8 @@ namespace Arrays {
                     e, o, height - 1
                 );
 
-            // If none of the middle-most
-            // candidate pivots are equal.
+                // If none of the middle-most
+                // candidate pivots are equal.
             } else if (*sl < *mid &&
                        *mid < *sr) {
 
@@ -779,12 +779,12 @@ namespace Arrays {
                 // proposed by
                 // Yaroslavskiy.
                 for (E *k  = l;
-                        k <= g; ++k)
+                     k <= g; ++k)
                     if (*k < lp)
                         swap(k, l++);
                     else if (*k > rp) {
                         while (*g > rp &&
-                                k < g)
+                               k < g)
                             --g;
                         swap(k, g--);
                         if (*k < lp)
@@ -849,8 +849,8 @@ namespace Arrays {
                     l, g, height - 1
                 );
 
-            // If one or more critical pivot
-            // candidates are equal.
+                // If one or more critical pivot
+                // candidates are equal.
             } else {
 
                 // Use traditional, Single-Pivot
