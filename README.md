@@ -63,7 +63,7 @@ A highly-optimized (un-tuned) Introsort assembled from research papers and open-
           chosen from the middle.
           If an outside pair is equal, two pivots are selected
           from the tercile indices. However, if a middle pair
-          is equal, then a single pivot will be selected from the
+          is also equal, then a single pivot will be selected from the
           middle and traditional Quick Sort will be used. This
           process helps to select pivots that divide the data
           as evenly as possible, mitigating the possibility of
