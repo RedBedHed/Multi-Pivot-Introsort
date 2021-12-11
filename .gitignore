@@ -2,6 +2,8 @@
 !LICENSE.txt
 extra.cpp
 main.cpp
+scrscrt.sh
+scrscrt.sh~
 Makefile
 Doxyfile
 Makefile~
