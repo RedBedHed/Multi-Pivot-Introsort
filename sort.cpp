@@ -103,7 +103,7 @@ namespace Arrays {
             assert(l != 0);
             parallelPrefixFill(l);
             return DeBruijnTableF[(int)
-                    ((l * DeBruijn64) >> 58U)
+                 ((l * DeBruijn64) >> 58U)
             ];
         }
 
@@ -112,7 +112,7 @@ namespace Arrays {
         swap(E *const i,
              E *const j) {
             E const
-                    el = *i;
+            el = *i;
             *i = *j;
             *j = el;
         }
@@ -301,7 +301,7 @@ namespace Arrays {
             E* const l = low;
             int x = r - l;
             for(int i =
-                (x >> 1U); i >= 0; --i)
+                    (x >> 1U); i >= 0; --i)
                 siftDown(l, i, x);
             while(l < --r) {
                 const E z = *l; *l = *r;
@@ -683,7 +683,7 @@ namespace Arrays {
                 // get pivot duplicates out
                 // of the way.
                 const uint32_t twoThirds =
-                    third << 1U;
+                        third << 1U;
                 if ((o - e) >=
                     (twoThirds)) {
                     for (E *k  = e;
@@ -846,7 +846,7 @@ namespace Arrays {
 
                 //Sort middle portion.
                 qSort<E, false>(
-                    l, g, height - 1
+                        l, g, height - 1
                 );
 
                 // If one or more critical pivot

@@ -3,6 +3,7 @@
 #include <time.h>
 #include "sort.h"
 #include <random>
+#include <stdio.h>
 #include <climits>
 #include <algorithm>
 
@@ -15,7 +16,39 @@ bool test(int* const a, const int len) {
     return true;
 }
 
+void quickers(int* const low, int* const high) {
+    const int x = high - low;
+    if(low >= high) return;
+
+    int pi = rand() % x;
+    int p = *(low + pi);
+    *(low + pi) = *low;
+
+    int* i = low, *j = high + 1;
+    while(true) {
+        while(*++i <= p) if(i >= high) break;
+        while(*--j > p) if(j <= low) break;
+        if(i >= j) break;
+        const int t = *i;
+        *i = *j;
+        *j = t;
+    }
+    *low = *j;
+    *j = p;
+
+    if(i == j) ++i;
+    --j;
+
+    if(low < j) quickers(low, j);
+    if(i < high) quickers(i, high);
+}
+
+int comparator (const void * p1, const void * p2) {
+    return (*(int*)p1 - *(int*)p2);
+}
+
 int main() {
+    srand(time(NULL));
     std::default_random_engine generator(clock());
     std::uniform_int_distribution<long> distribution(LONG_MIN, LONG_MAX);
     double c = 0;
@@ -27,7 +60,10 @@ int main() {
             //std::cout << *i << ' ';
         }
         const int s = clock();
-        Arrays::uSort<int32_t>(a, x);
+        qsort(a, x, sizeof(int), comparator);
+        //Arrays::uSort<int32_t>(a, x);
+        //quickers(a, a + x);
+
         c += (double) (clock() - s) / CLOCKS_PER_SEC;
         if (!test(a, x)) {
             std::cout << "aw!";
