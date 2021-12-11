@@ -54,7 +54,7 @@ namespace Arrays {
 
         template<> [[maybe_unused]]
         void parallelPrefixFill
-                <uint64_t>(uint64_t& x) {
+        <uint64_t>(uint64_t& x) {
             x |= x >> 1U;
             x |= x >> 2U;
             x |= x >> 4U;
@@ -65,7 +65,7 @@ namespace Arrays {
 
         template<> [[maybe_unused]]
         void parallelPrefixFill
-                <uint32_t>(uint32_t & x) {
+        <uint32_t>(uint32_t & x) {
             x |= x >> 1U;
             x |= x >> 2U;
             x |= x >> 4U;
@@ -75,7 +75,7 @@ namespace Arrays {
 
         template<> [[maybe_unused]]
         void parallelPrefixFill
-                <uint16_t>(uint16_t & x) {
+        <uint16_t>(uint16_t & x) {
             x |= x >> 1U;
             x |= x >> 2U;
             x |= x >> 4U;
@@ -84,7 +84,7 @@ namespace Arrays {
 
         template<> [[maybe_unused]]
         void parallelPrefixFill
-                <uint8_t>(uint8_t & x) {
+        <uint8_t>(uint8_t & x) {
             x |= x >> 1U;
             x |= x >> 2U;
             x |= x >> 4U;

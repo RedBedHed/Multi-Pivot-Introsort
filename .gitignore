@@ -1,6 +1,7 @@
 *.txt
 !LICENSE.txt
 extra.cpp
+main.cpp
 Makefile
 Doxyfile
 Makefile~
