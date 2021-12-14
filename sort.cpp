@@ -301,7 +301,7 @@ namespace Arrays {
             E* const l = low;
             int x = r - l;
             for(int i =
-                    (x >> 1U); i >= 0; --i)
+                (x >> 1U); i >= 0; --i)
                 siftDown(l, i, x);
             while(l < --r) {
                 const E z = *l; *l = *r;
