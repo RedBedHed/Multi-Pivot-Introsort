@@ -118,7 +118,7 @@ A highly-optimized (un-tuned) Introsort assembled from research papers and open-
           Insertion Sort is small and relies heavily on swapping.
           Fewer instructions help to alleviate the overhead that
           plagues large sorting algorithms, and consistent swapping
-          leverages CPU caching to its fullest extent. These
+          leverages CPU caching by locality to its fullest extent. These
           features allow insertion sort to beat the runtimes of
           O(nlogn) sorts on small sets of data.
              </p>
