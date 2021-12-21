@@ -498,8 +498,7 @@ namespace Arrays {
 
             // Find an approximate
             // midpoint of the interval.
-            E *const mid =
-                low + ((high - low) >> 1U);
+            E *const mid = low + (x >> 1U);
 
             // Assign tercile indices
             // to candidate pivots.
@@ -831,7 +830,7 @@ namespace Arrays {
                 // get pivot duplicates out
                 // of the way.
                 if ((g - l) >=
-                    (x - third)) {
+                    (third << 1U)) {
                     for (E *k = l;
                          k <= g; ++k)
                         if (*k == lp)
@@ -846,7 +845,7 @@ namespace Arrays {
 
                 //Sort middle portion.
                 qSort<E, false>(
-                        l, g, height - 1
+                    l, g, height - 1
                 );
 
                 // If one or more critical pivot
