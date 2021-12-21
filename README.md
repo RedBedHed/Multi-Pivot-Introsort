@@ -32,8 +32,7 @@ A highly-optimized (un-tuned) Introsort assembled from research papers and open-
          
 <p>
           An optimized Dual-Pivot Quicksort by Bloch and
-          Bently can be found in the open-source jdk within
-          the java.util library.
+          Bently can be found in any jdk after version 6.
           </p>
          
 <p>
