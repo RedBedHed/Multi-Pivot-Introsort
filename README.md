@@ -27,7 +27,7 @@ A highly-optimized (un-tuned) Introsort assembled from research papers and open-
           Here
            </a>
           is the three pivot partition algorithm by Kushagra,
-          Lopez-Ortix, Munro, and Qiao.
+          Lopez-Ortiz, Munro, and Qiao.
           </p>
          
 <p>
