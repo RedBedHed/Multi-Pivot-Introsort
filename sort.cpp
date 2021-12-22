@@ -503,7 +503,7 @@ namespace Arrays {
             // the interval.
             const uint32_t
                 z = x >> 1U,
-                y = x >> 1U,
+                y = z >> 1U,
                 third = y + (y >> 1U);
 
             // Find an approximate
