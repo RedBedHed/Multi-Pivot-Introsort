@@ -9,13 +9,13 @@ namespace Arrays {
     namespace {
 
         constexpr uint32_t
-                DPQSInsertionThreshold = 32;
+        DPQSInsertionThreshold = 32;
 
         /**
          * The DeBruijn constant.
          */
         constexpr uint64_t DeBruijn64 =
-                0x03F79D71B4CB0A89L;
+            0x03F79D71B4CB0A89L;
 
         /*
          * The DeBruijn map from key to integer
@@ -75,7 +75,7 @@ namespace Arrays {
 
         template<> [[maybe_unused]]
         void parallelPrefixFill
-                <uint16_t>(uint16_t & x) {
+        <uint16_t>(uint16_t & x) {
             x |= x >> 1U;
             x |= x >> 2U;
             x |= x >> 4U;
