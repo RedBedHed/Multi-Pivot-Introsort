@@ -480,7 +480,7 @@ namespace Arrays {
         <typename E, bool Leftmost = true>
         void qSort(E *const low,
                    E * high,
-                   const int height) {
+                   int height) {
             // Sort leftmost portion.
             while (true) {
 
@@ -497,19 +497,20 @@ namespace Arrays {
                 // Heap sort when the sort
                 // tree becomes excessively
                 // tall.
-                if (height < 0)
+                if (height-- < 0)
                     return hSort(low, high);
 
                 // Find an inexpensive
                 // approximation of a third of
                 // the interval.
                 const uint32_t
-                    y = x >> 2U,
+                    z = x >> 1U,
+                    y = z >> 1U,
                     third = y + (y >> 1U);
 
                 // Find an approximate
                 // midpoint of the interval.
-                E *const mid = low + (x >> 1U);
+                E *const mid = low + z;
 
                 // Assign tercile indices
                 // to candidate pivots.
@@ -569,10 +570,10 @@ namespace Arrays {
                 // If none of the sorted
                 // candidate pivots are
                 // equal.
-                if (*low < *sl &&
-                    *sl < *mid &&
-                    *mid < *sr &&
-                    *sr < *high) {
+                if (*low < *sl  &&
+                    *sl  < *mid &&
+                    *mid < *sr  &&
+                    *sr  < *high) {
 
                     // Use Three-Pivot Quick Sort.
 
@@ -591,9 +592,9 @@ namespace Arrays {
                     // filled and pivots will
                     // be swapped into place
                     // later.
-                    *sl = *low;
+                    *sl  = *low;
                     *mid = *(low + 1);
-                    *sr = *high;
+                    *sr  = *high;
 
                     // Initialize l and g.
                     // "less" and "great"
@@ -668,7 +669,7 @@ namespace Arrays {
 
                     // Sort the rightmost portion.
                     qSort<E, false>(
-                        e, high, height - 1
+                        e, high, height
                     );
 
                     // sort the leftmost portion
@@ -710,7 +711,7 @@ namespace Arrays {
                     // Sort the leftmost middle
                     // portion.
                     qSort<E, false>(
-                        e, o, height - 1
+                        e, o, height
                     );
 
                     // Copy pivot 2 and 3
@@ -746,12 +747,12 @@ namespace Arrays {
                     // sort rightmost middle
                     // portion.
                     qSort<E, false>(
-                        e, o, height - 1
+                        e, o, height
                     );
 
                     // If none of the middle-most
                     // candidate pivots are equal.
-                } else if (*sl < *mid &&
+                } else if (*sl  < *mid &&
                            *mid < *sr) {
 
                     // Use Dual-Pivot Quick Sort.
@@ -803,14 +804,14 @@ namespace Arrays {
 
                     // Fill ends. Swap the
                     // pivots back into place.
-                    *low = *--l;
-                    *l = lp;
+                    *low  = *--l;
+                    *l    = lp;
                     *high = *++g;
-                    *g = rp;
+                    *g    = rp;
 
                     // Copy pivot indices.
                     E *p = l,
-                            *q = g;
+                      *q = g;
 
                     // Skip elements that are
                     // equal to the pivots.
@@ -821,7 +822,7 @@ namespace Arrays {
 
                     // Sort right potion
                     qSort<E, false>(
-                        q, high, height - 1
+                        q, high, height
                     );
 
                     // Sort left portion
@@ -856,7 +857,7 @@ namespace Arrays {
 
                     //Sort middle portion.
                     qSort<E, false>(
-                        l, g, height - 1
+                        l, g, height
                     );
 
                     // If one or more critical pivot
@@ -880,7 +881,7 @@ namespace Arrays {
                     // "less" and "great"
                     // respectively.
                     E *l = low + 1,
-                            *g = high;
+                      *g = high;
 
                     // Skip over elements that
                     // are already in order.
@@ -922,12 +923,13 @@ namespace Arrays {
 
                     // Sort right portion.
                     qSort<E, false>(
-                        g, high, height - 1
+                        g, high, height
                     );
 
                     // Sort left portion iteratively.
                     high = l;
                 }
+
             }
         }
     }
