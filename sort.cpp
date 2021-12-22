@@ -53,7 +53,7 @@ namespace Arrays {
         void parallelPrefixFill(E &x);
 
         template<> [[maybe_unused]]
-        inline void parallelPrefixFill
+        void parallelPrefixFill
         <uint64_t>(uint64_t& x) {
             x |= x >> 1U;
             x |= x >> 2U;
@@ -64,7 +64,7 @@ namespace Arrays {
         }
 
         template<> [[maybe_unused]]
-        inline void parallelPrefixFill
+        void parallelPrefixFill
         <uint32_t>(uint32_t & x) {
             x |= x >> 1U;
             x |= x >> 2U;
@@ -74,8 +74,8 @@ namespace Arrays {
         }
 
         template<> [[maybe_unused]]
-        inline void parallelPrefixFill
-        <uint16_t>(uint16_t & x) {
+        void parallelPrefixFill
+                <uint16_t>(uint16_t & x) {
             x |= x >> 1U;
             x |= x >> 2U;
             x |= x >> 4U;
@@ -83,7 +83,7 @@ namespace Arrays {
         }
 
         template<> [[maybe_unused]]
-        inline void parallelPrefixFill
+        void parallelPrefixFill
         <uint8_t>(uint8_t & x) {
             x |= x >> 1U;
             x |= x >> 2U;
@@ -103,18 +103,10 @@ namespace Arrays {
             assert(l != 0);
             parallelPrefixFill(l);
             return DeBruijnTableF[(int)
-                 ((l * DeBruijn64) >> 58U)
+                    ((l * DeBruijn64) >> 58U)
             ];
         }
 
-        /**
-         * A function to swap the elements at the
-         * given pointers.
-         *
-         * @tparam E the type
-         * @param i a pointer to the first element
-         * @param j a pointer to the second element
-         */
         template<typename E>
         constexpr void
         swap(E *const i,
@@ -153,8 +145,7 @@ namespace Arrays {
          * @param isLeftmost whether or not this subarray is a
          * left-most partition.
          */
-        template
-        <typename E, bool Leftmost>
+        template<typename E, bool Leftmost>
         inline void
         iSort(E *const low,
               E *const high) {
@@ -502,17 +493,16 @@ namespace Arrays {
             // approximation of a third of
             // the interval.
             const uint32_t
-                z = x >> 1U,
-                y = z >> 1U,
+                y = x >> 2U,
                 third = y + (y >> 1U);
 
             // Find an approximate
             // midpoint of the interval.
-            E *const mid = low + z;
+            E *const mid = low + (x >> 1U);
 
             // Assign tercile indices
             // to candidate pivots.
-            E *const sl = low  + third;
+            E *const sl = low + third;
             E *const sr = high - third;
 
             // Insertion sort all five
@@ -803,9 +793,9 @@ namespace Arrays {
                 // Fill ends. Swap the
                 // pivots back into place.
                 *low  = *--l;
-                *l    = lp;
+                *l    =   lp;
                 *high = *++g;
-                *g    = rp;
+                *g    =   rp;
 
                 // Copy pivot indices.
                 E *p = l,
@@ -840,7 +830,7 @@ namespace Arrays {
                 // get pivot duplicates out
                 // of the way.
                 if ((g - l) >=
-                    (third << 1U)) {
+                    (x - third)) {
                     for (E *k = l;
                          k <= g; ++k)
                         if (*k == lp)
