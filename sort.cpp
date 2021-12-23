@@ -107,6 +107,13 @@ namespace Arrays {
             ];
         }
 
+        /**
+         * A simple swap method.
+         *
+         * @tparam E the element type
+         * @param i the first element pointer
+         * @param j the second element pointer
+         */
         template<typename E>
         constexpr void
         swap(E *const i,
