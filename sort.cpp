@@ -376,7 +376,7 @@ namespace Arrays {
          * chosen from the middle.
          * If an outside pair is equal, two pivots are selected
          * from the tercile indices. However, if a middle pair
-         * is equal, then a single pivot will be selected from the
+         * is also equal, then a single pivot will be selected from the
          * middle and traditional Quick Sort will be used. This
          * process helps to select pivots that divide the data
          * as evenly as possible, mitigating the possibility of
@@ -390,10 +390,10 @@ namespace Arrays {
          *     </u>
          *    </p>
          *    <p>
-         * Multi-way partitioning results in smaller intervals to
-         * partition in recursive calls. This makes cache hits more
-         * likely. Multi-way partitioning also helps to trim the
-         * height of the sort tree.
+         * Multi-way partitioning has been shown to yeild a higher
+         * number of cache hits than traditional two-way partitioning.
+         * Multi-way partitioning also helps to trim the height of the
+         * sort tree.
          *    </p>
          *   </li>
          *   <li>
@@ -403,8 +403,8 @@ namespace Arrays {
          *     </u>
          *    </p>
          *    <p>
-         * Equal elements and elements that respect the partition
-         * will be ignored.
+         * Elements equal to the pivot(s) and elements that respect the
+         * partition will be ignored.
          *    </p>
          *   </li>
          *   <li>
@@ -417,7 +417,8 @@ namespace Arrays {
          * After partitioning with more than one pivot, if the middle
          * portion comprises more than 2/3 of the current interval,
          * we swap all elements equal to the pivots out of the way
-         * before recursively sorting.
+         * before recursively sorting. This helps to avoid the case
+         * in which we need to use heap sort.
          *    </p>
          *   </li>
          *   <li>
@@ -429,8 +430,8 @@ namespace Arrays {
          *    <p>
          * Insertion Sort is small and relies heavily on swapping.
          * Fewer instructions help to alleviate the overhead that
-         * plagues sorting algorithms, and consistent swapping
-         * leverages CPU caching to its fullest extent. These
+         * plagues large sorting algorithms, and consistent swapping
+         * leverages CPU caching by locality to its fullest extent. These
          * features allow insertion sort to beat the runtimes of
          * O(nlogn) sorts on small sets of data.
          *    </p>
