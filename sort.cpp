@@ -924,6 +924,7 @@ namespace Arrays {
     template <typename E>
     inline void uSort(E* const a,
                       const uint32_t cnt) {
+        // floor of log base 2 of cnt, times two.
         const int log2Cnt = bitScanRev(cnt) << 1U;
         return qSort(a, a + (cnt - 1), log2Cnt);
     }
