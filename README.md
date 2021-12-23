@@ -76,10 +76,10 @@ A highly-optimized (un-tuned) Introsort assembled from research papers and open-
               </u>
              </p>
              <p>
-          Multi-way partitioning results in smaller intervals to
-          partition in recursive calls. This makes cache hits more
-          likely. Multi-way partitioning also helps to trim the
-          height of the sort tree.
+          Multi-way partitioning has been shown to yeild a higher
+          number of cache hits than traditional two-way partitioning. 
+          Multi-way partitioning also helps to trim the height of the 
+          sort tree.
              </p>
             </li>
             <li>
