@@ -600,8 +600,8 @@ namespace Arrays {
 
                 // Skip elements that
                 // are already in order.
-                while (++l < high && *l < p1);
-                while (--g > low  && *g > p3);
+                while (*++l < p1);
+                while (*--g > p3);
 
                 // Copy ll and gg.
                 // "less-less" and
@@ -655,13 +655,8 @@ namespace Arrays {
 
                 // Copy pivot 1 and 3
                 // pointers.
-                E* o = ll,
-                 * e = gg;
-
-                // Skip elements equal to p1
-                // and p3.
-                while (--o > low && *o == p1);
-                while (++e < high && *e == p3);
+                E* o = ll - 1,
+                 * e = gg + 1;
 
                 // Sort the leftmost and
                 // rightmost portion(s).
@@ -777,8 +772,8 @@ namespace Arrays {
 
                 // Skip elements that
                 // are already in order.
-                while (++l < high && *l < lp);
-                while (--g > low && *g > rp);
+                while (*++l < lp);
+                while (*--g > rp);
 
                 // Partition with
                 // the Dutch flag
@@ -811,10 +806,8 @@ namespace Arrays {
 
                 // Skip elements that are
                 // equal to the pivots.
-                while (p > low && *p == lp)
-                    --p;
-                while (q < high && *q == rp)
-                    ++q;
+                if (p > low)  --p;
+                if (q < high) ++q;
 
                 // Sort right and left
                 // portions.
@@ -879,13 +872,6 @@ namespace Arrays {
                 E *l = low + 1,
                   *g = high;
 
-                // Skip over elements that
-                // are already in order.
-                while (l < high && *l < p)
-                    ++l;
-                while (g > low && *g > p)
-                    --g;
-
                 // Partition.
                 for (E *k = l;
                      k <= g; ++k)
@@ -906,16 +892,8 @@ namespace Arrays {
                 // Swap pivot into place.
                 *l = p;
 
-                // Copy l, recycle g. "less"
-                // and "great" respectively.
-                g = l;
-
-                // Skip over elements that
-                // are equal to the pivot.
-                while (l > low && *l == p)
-                    --l;
-                while (g < high && *g == p)
-                    ++g;
+                if (l > low)  --l;
+                if (g < high) ++g;
 
                 // Sort left and right portions.
                 qSort<E, Leftmost>(
