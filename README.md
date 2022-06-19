@@ -82,15 +82,15 @@ A highly-optimized (un-tuned) Introsort assembled from research papers and open-
           number of cache hits than traditional two-way partitioning. 
           Multi-way partitioning also helps to trim the height of the 
           sort tree.
-             </p>
+             </p> 
+            </li>
+            <li>
              <p>
               <u>
           Keep the Middle Portion(s) as Small as Possible In 
           Multi-Pivot Partitioning.
               </u>
              </p>
-            </li>
-            <li>
              <p>
           The middle portions may contain elements equal to the pivots
           in multi-pivot partitioning. Therefore, after partitioning 
