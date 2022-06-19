@@ -189,16 +189,16 @@ namespace Arrays {
                      ++l <= r;
                      i = ++l) {
                     E ex = *i, ey = *l;
-                    if (ex < ey) {
-                        ey = ex;
-                        ex = *l;
+                    if (ey < ex) {
+                        ex = ey;
+                        ey = *i;
                     }
-                    while (ex < *--i)
-                        *(i + 2) = *i;
-                    *(++i + 1) = ex;
                     while (ey < *--i)
+                        *(i + 2) = *i;
+                    *(++i + 1) = ey;
+                    while (ex < *--i)
                         *(i + 1) = *i;
-                    *(i + 1) = ey;
+                    *(i + 1) = ex;
                 }
                 E ez = *r;
                 while (ez < *--r)
