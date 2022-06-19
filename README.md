@@ -66,7 +66,9 @@ A highly-optimized (un-tuned) Introsort assembled from research papers and open-
           middle and traditional Quick Sort will be used. This
           process helps to select pivots that divide the data
           as evenly as possible, mitigating the possibility of
-          the worst-case O(N<sup>2</sup>) time complexity.
+          the worst-case O(N<sup>2</sup>) time complexity. This
+          process also helps to ensure that the partitioning
+          algorithm used is optimal for the sub-array sampled.
              </p>
             </li>
             <li>
@@ -81,30 +83,20 @@ A highly-optimized (un-tuned) Introsort assembled from research papers and open-
           Multi-way partitioning also helps to trim the height of the 
           sort tree.
              </p>
-            </li>
-            <li>
              <p>
               <u>
-          Ignore Elements when possible
+          Keep the Middle Portion(s) as Small as Possible In 
+          Multi-Pivot Partitioning.
               </u>
              </p>
              <p>
-          Elements equal to the pivot(s) and elements that respect the 
-          partition will be ignored.
-             </p>
-            </li>
-            <li>
-             <p>
-              <u>
-          Keep the Middle Portion(s) as Small as Possible
-              </u>
-             </p>
-             <p>
-          After partitioning with more than one pivot, if the middle
-          portion comprises more than 2/3 of the current interval,
-          we swap all elements equal to the pivots out of the way
-          before recursively sorting. This helps to avoid the case
-          in which we need to use heap sort.     
+          The middle portions may contain elements equal to the pivots
+          in multi-pivot partitioning. Therefore, after partitioning 
+          with more than one pivot, if the middle portion comprises 
+          more than 2/3 of the current interval, we swap all elements
+          equal to the pivots out of the way before recursively sorting. 
+          This helps to boost performance on arrays with many equal 
+          elements.
              </p>
             </li>
             <li>
@@ -114,15 +106,25 @@ A highly-optimized (un-tuned) Introsort assembled from research papers and open-
               </u>
              </p>
              <p>
-          Insertion Sort is small and relies heavily on swapping.
-          Fewer instructions help to alleviate the overhead that
-          plagues large sorting algorithms, and consistent swapping
-          leverages CPU caching by locality to its fullest extent. These
-          features allow insertion sort to beat the runtimes of
-          O(nlogn) sorts on small sets of data.
+          Insertion sort performs better than O(nlogn) sorts
+          on small arrays where asymptotic complexity matters
+          less and instruction overhead matters more.
              </p>
             </li>
-              <li>
+            <li>
+             <p>
+              <u>
+          Use Jon Bentley's Pair Insertion Sort On Small, Non-Leftmost
+          Partitions.
+              </u>
+             </p>
+             <p>
+          Pair insertion sort-- which ignores the lower bound check-- is
+          possible on non-leftmost partitions. Pair insertion sort inserts
+          two elements for each iteration of its outer loop.
+             </p>
+            </li>
+            <li>
              <p>
               <u>
           Use Heap Sort to prevent Quicksort's worst-case time
