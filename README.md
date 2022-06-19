@@ -89,6 +89,8 @@ A highly-optimized (un-tuned) Introsort assembled from research papers and open-
           Multi-Pivot Partitioning.
               </u>
              </p>
+            </li>
+            <li>
              <p>
           The middle portions may contain elements equal to the pivots
           in multi-pivot partitioning. Therefore, after partitioning 
