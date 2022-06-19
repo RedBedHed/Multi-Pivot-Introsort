@@ -129,8 +129,8 @@ A highly-optimized (un-tuned) Introsort assembled from research papers and open-
             <li>
              <p>
               <u>
-          Use Heap Sort to prevent Quicksort's worst-case time
-          complexity.
+          Use Heap Sort to prevent Quicksort's Worst-Case Time
+          Complexity.
               </u>
              </p>
              <p>
