@@ -653,8 +653,7 @@ namespace Arrays {
                 *low = *--ll; *ll = p1;
                 *high = *++gg; *gg = p3;
 
-                // Copy pivot 1 and 3
-                // pointers.
+                // Skip pivot 1 and 3.
                 E* o = ll - 1,
                  * e = gg + 1;
 
