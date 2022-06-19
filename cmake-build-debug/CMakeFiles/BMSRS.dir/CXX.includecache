@@ -6,6 +6,24 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/evcmo/CLionProjects/BMSRS/main.cpp
+iostream
+-
+random
+-
+time.h
+-
+sort.h
+C:/Users/evcmo/CLionProjects/BMSRS/sort.h
+random
+-
+stdio.h
+-
+climits
+-
+algorithm
+-
+
 C:/Users/evcmo/CLionProjects/BMSRS/sort.cpp
 sort.h
 C:/Users/evcmo/CLionProjects/BMSRS/sort.h

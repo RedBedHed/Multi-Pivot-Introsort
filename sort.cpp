@@ -672,12 +672,9 @@ namespace Arrays {
                 e = ll;
                 o =  l;
 
-                // Skip elements equal to
-                // p1 and p2.
-                while (e < o && *e == p1)
-                    ++e;
-                while (o > e && *o == p2)
-                    --o;
+                // Skip pivots.
+                if (e < o) ++e;
+                if (e < o) --o;
 
                 // If leftmost middle
                 // portion is too large
@@ -710,12 +707,9 @@ namespace Arrays {
                 e =  l;
                 o = gg;
 
-                // Skip elements equal to
-                // p2 and p3.
-                while (e < o && *e == p2)
-                    ++e;
-                while (o > e && *o == p3)
-                    --o;
+                // Skip pivots.
+                if (e < o) ++e;
+                if (e < o) --o;
 
                 // If rightmost middle
                 // portion is too large
@@ -804,8 +798,7 @@ namespace Arrays {
                 E *p = l,
                   *q = g;
 
-                // Skip elements that are
-                // equal to the pivots.
+                // Skip pivots.
                 if (p > low)  --p;
                 if (q < high) ++q;
 
@@ -818,12 +811,9 @@ namespace Arrays {
                     q, high, height - 1
                 );
 
-                // Skip over elements that
-                // are equal to the pivots.
-                while (l < g && *l == lp)
-                    ++l;
-                while (g > l && *g == rp)
-                    --g;
+                // Skip pivots.
+                if (l < g) ++l;
+                if (l < g) --g;
 
                 // If middle portion is
                 // too large (>= 2/3 of
