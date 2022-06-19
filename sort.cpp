@@ -140,7 +140,8 @@ namespace Arrays {
          * a portion with lesser elements. The fact that all of
          * the elements on the left are automatically less than
          * the elements in the current portion allows us to skip
-         * the costly lower boundary check in the nested loops.
+         * the costly lower boundary check in the nested loops
+         * and insert two elements in one go.
          * </p>
          *
          * @authors Josh Bloch
@@ -170,8 +171,8 @@ namespace Arrays {
                     E *j = i - 1;
                     for (; j >= l &&
                            t < *j; --j)
-                        *(j + 1) = *j;
-                    *(j + 1) = t;
+                        j[1] = *j;
+                    j[1] = t;
                 }
             } else {
 
@@ -194,16 +195,16 @@ namespace Arrays {
                         ey = *i;
                     }
                     while (ey < *--i)
-                        *(i + 2) = *i;
-                    *(++i + 1) = ey;
+                        i[2] = *i;
+                    (++i)[1] = ey;
                     while (ex < *--i)
-                        *(i + 1) = *i;
-                    *(i + 1) = ex;
+                        i[1] = *i;
+                    i[1] = ex;
                 }
                 E ez = *r;
                 while (ez < *--r)
-                    *(r + 1) = *r;
-                *(r + 1) = ez;
+                    r[1] = *r;
+                r[1] = ez;
             }
         }
 
