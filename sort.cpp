@@ -544,8 +544,8 @@ namespace Arrays {
                 o =  l;
 
                 // Skip pivots.
-                if (e < o) ++e;
-                if (e < o) --o;
+                e += (e < o);
+                o -= (e < o);
 
                 // If leftmost middle
                 // portion is too large
@@ -579,8 +579,8 @@ namespace Arrays {
                 o = gg;
 
                 // Skip pivots.
-                if (e < o) ++e;
-                if (e < o) --o;
+                e += (e < o);
+                o -= (e < o);
 
                 // If rightmost middle
                 // portion is too large
@@ -670,8 +670,8 @@ namespace Arrays {
                   *q = g;
 
                 // Skip pivots.
-                if (p > low)  --p;
-                if (q < high) ++q;
+                p -= (p > low ); 
+                q += (q < high);
 
                 // Sort right and left
                 // portions.
@@ -683,8 +683,8 @@ namespace Arrays {
                 );
 
                 // Skip pivots.
-                if (l < g) ++l;
-                if (l < g) --g;
+                l += (l < g);
+                g -= (l < g);
 
                 // If middle portion is
                 // too large (>= 2/3 of
@@ -753,8 +753,8 @@ namespace Arrays {
                 // Swap pivot into place.
                 *l = p;
 
-                if (l > low)  --l;
-                if (g < high) ++g;
+                l -= (l > low );
+                g += (g < high);
 
                 // Sort left and right portions.
                 qSort<E, Leftmost>(
